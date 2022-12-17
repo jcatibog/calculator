@@ -11,5 +11,10 @@ pipeline {
                 sh "./mvnw test"
             }
         }
+        stage("Code coverage") {
+            steps {
+                sh "./mvnw verify"
+            }
+        }
     }
 }
